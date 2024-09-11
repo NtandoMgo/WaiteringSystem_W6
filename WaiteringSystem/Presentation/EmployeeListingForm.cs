@@ -31,7 +31,7 @@ namespace WaiteringSystem.Presentation
         {
             view=0,
             add=1,
-            eidt=2,
+            edit=2,
             delete=3
         }
         #endregion
@@ -91,6 +91,35 @@ namespace WaiteringSystem.Presentation
             phone_txt.Text = "";
             pay_txt.Text = "";
             shifts_txt.Text = "";
+        }
+
+        private void EnableEntries(bool value)
+        {
+            if(state == FormStates.edit && value)
+            {
+                textBox1.Enabled = !value;
+                textBox2.Enabled = !value;
+            }else
+            {
+                textBox1.Enabled = value;
+                textBox2.Enabled = value;
+            }
+
+            name_txt.Enabled = value;
+            phone_txt.Enabled = value;
+            pay_txt.Enabled = value;
+            shifts_txt.Enabled = value;
+
+            if (state == FormStates.delete)
+            {
+                cancel_btn.Enabled = !value;
+                submit_btn.Enabled = !value;
+            }
+            else
+            {
+                cancel_btn.Enabled = value;
+                submit_btn.Enabled = value;
+            }
         }
         #endregion
 
