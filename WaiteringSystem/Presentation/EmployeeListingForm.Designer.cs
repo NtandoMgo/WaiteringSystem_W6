@@ -67,6 +67,7 @@ namespace WaiteringSystem.Presentation
             this.employeeListView.Size = new System.Drawing.Size(693, 226);
             this.employeeListView.TabIndex = 1;
             this.employeeListView.UseCompatibleStateImageBehavior = false;
+            this.employeeListView.SelectedIndexChanged += new System.EventHandler(this.employeeListView_SelectedIndexChanged);
             // 
             // cancel_btn
             // 

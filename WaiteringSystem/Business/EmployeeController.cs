@@ -66,7 +66,32 @@ namespace WaiteringSystem.Business
             return matches;
         }
 
+        #region Find method
+        public Employee Find(string ID)
+        {
+            int index = 0;
+            bool found = employees[index].ID == ID;
+            int count = employees.Count;
 
+            while (!(found) && (index < count - 1))
+            {
+                index++;
+                found = employees[index].ID == ID;
+            }
 
+           // return employees[index];    // say index is > count, we exit the loop but haven't found the
+                                        // employee, we still gonna return the first employee which is
+                                        // not what we looking for
+            if (found)
+            {
+                return employees[index];
+            }
+            else
+            {
+                return null; // Employee not found
+            }
         }
+        #endregion
+
+    }
 }

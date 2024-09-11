@@ -17,8 +17,8 @@ namespace WaiteringSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new EmployeesMDIParent());
-            Application.Run(new EmployeeListingForm());
+            Application.Run(new EmployeesMDIParent());
+            //Application.Run(new EmployeeListingForm());
         }
     }
 }

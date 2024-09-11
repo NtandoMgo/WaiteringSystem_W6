@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using WaiteringSystem.Business;
+using WaiteringSystem.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WaiteringSystem.Presentation
@@ -119,6 +120,38 @@ namespace WaiteringSystem.Presentation
             {
                 cancel_btn.Enabled = value;
                 submit_btn.Enabled = value;
+            }
+        }
+
+        private void PopulateTextBoxes(Employee employee)
+        {
+            HeadWaiter headW;
+            Waiter waiter;
+            Runner runner;
+
+            textBox1.Text = employee.ID;
+            textBox2.Text = employee.EmployeeID;
+            name_txt.Text= employee.Name;
+            phone_txt.Text = employee.Telephone;
+
+            switch (employee.role.getRoleValue)
+            {
+                case Role.RoleType.Headwaiter:
+                    headW = (HeadWaiter)employee.role;
+                    pay_txt.Text = Convert.ToString(headW.SalaryAmount);
+                    break;
+                case Role.RoleType.Waiter:
+                    waiter = (Waiter)employee.role;
+                    pay_txt.Text = Convert.ToString(waiter.getTips);
+                    pay_lbl.Text = "Tips";
+                    shifts_txt.Text = Convert.ToString(waiter.getShifts);
+                    break;
+                case Role.RoleType.Runner:
+                    runner = (Runner)employee.role;
+                    pay_lbl.Text = "Tips";
+                    pay_txt.Text = Convert.ToString(runner.getTips);
+                    shifts_txt.Text = Convert.ToString(runner.getShifts);
+                    break;
             }
         }
         #endregion
@@ -254,5 +287,22 @@ namespace WaiteringSystem.Presentation
             employeeListView.GridLines = true;
         }
         #endregion
+
+        private void employeeListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            ShowAll(true, state, roleValue);       // form state was initiated as view initially
+            state = FormStates.view;
+            EnableEntries(false);
+
+            if (employeeListView.SelectedItems.Count > 0) // if you selected an item
+            {
+                MessageBox.Show("Employee selected");       // debugging
+                Employee employee =
+                employeeController.Find(employeeListView.SelectedItems[0].Text);
+                
+                PopulateTextBoxes(employee);
+            }
+        }
     }
 }
