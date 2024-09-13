@@ -289,6 +289,7 @@ namespace WaiteringSystem.Data
         {
             bool success = true;
             Create_INSERT_Command(anEmp);
+            Create_UPDATE_Command(anEmp);
             switch (anEmp.role.getRoleValue)
             {
                 case Role.RoleType.Headwaiter:
@@ -311,10 +312,67 @@ namespace WaiteringSystem.Data
             param.SourceVersion = DataRowVersion.Current;
             daMain.UpdateCommand.Parameters.Add(param);
             // 2.5.1 TO DO: -: Do for all fields other than ID and EMPID as for the Build Insert parameters.
-           // Ofcourse, depending on the role. The code is similar to the Build_INSERT_Parameters that you created
+            // Ofcourse, depending on the role. The code is similar to the Build_INSERT_Parameters that you created
+
+            param = new SqlParameter("@Phone", SqlDbType.NVarChar, 15, "Phone");
+            param.SourceVersion = DataRowVersion.Current;
+            daMain.InsertCommand.Parameters.Add(param);
+
+            param = new SqlParameter("@Role", SqlDbType.TinyInt, 1, "Role");
+            param.SourceVersion = DataRowVersion.Current;
+            daMain.InsertCommand.Parameters.Add(param);
+
+            switch (anEmp.role.getRoleValue)
+            {
+                case Role.RoleType.Headwaiter:
+                    param = new SqlParameter("@Salary", SqlDbType.Money, 8, "Salary");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+                    break;
+                case Role.RoleType.Waiter:
+                    param = new SqlParameter("@Tips", SqlDbType.Money, 8, "Tips");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+
+                    param = new SqlParameter("@DayRate", SqlDbType.Money, 8, "DayRate");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+
+                    param = new SqlParameter("@NoOfShifts", SqlDbType.SmallInt, 4, "NoOfShifts");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+                    break;
+                case Role.RoleType.Runner:
+                    param = new SqlParameter("@DayRate", SqlDbType.Money, 8, "DayRate");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+
+                    param = new SqlParameter("@NoOfShifts", SqlDbType.SmallInt, 4, "NoOfShifts");
+                    param.SourceVersion = DataRowVersion.Current;
+                    daMain.InsertCommand.Parameters.Add(param);
+                    break;
+            }
+
             param = new SqlParameter("@Original_ID", SqlDbType.NVarChar, 15, "ID");
             param.SourceVersion = DataRowVersion.Original;
             daMain.UpdateCommand.Parameters.Add(param);
+        }
+
+        private void Create_UPDATE_Command(Employee anEmp)
+        {
+            switch (anEmp.role.getRoleValue)
+            {
+                case Role.RoleType.Headwaiter:
+                    daMain.UpdateCommand = new SqlCommand("UPDATE HeadWaiter SET Name =@Name,Phone =@Phone, Role= @Role, Salary = @Salary " + "WHERE ID = @Original_ID", cnMain);
+                    break;
+                case Role.RoleType.Waiter:
+                    daMain.UpdateCommand = new SqlCommand("UPDATE Waiter SET Name =@Name,Phone =@Phone, Role= @Role, Tips = @Tips, DayRate=@DayRate, NoOfShifts=@NoOfShifts " + "WHERE ID = @Original_ID", cnMain);
+                    break;
+                case Role.RoleType.Runner:
+                    daMain.UpdateCommand = new SqlCommand("UPDATE Runner SET Name =@Name,Phone =@Phone, Role= @Role, Tips = @Tips, DayRate=@DayRate, NoOfShifts=@NoOfShifts " + "WHERE ID = @Original_ID", cnMain);
+                    break;
+            }
+            Build_UPDATE_Parameters(anEmp);
         }
 
         #endregion
