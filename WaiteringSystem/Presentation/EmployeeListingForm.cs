@@ -308,5 +308,10 @@ namespace WaiteringSystem.Presentation
                 PopulateTextBoxes(employee);
             }
         }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

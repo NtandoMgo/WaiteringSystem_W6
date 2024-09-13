@@ -19,6 +19,15 @@ namespace WaiteringSystem.Data
         protected SqlConnection cnMain;
         protected DataSet dsMain;
         protected SqlDataAdapter daMain;
+
+        public enum DBOperation
+        {
+            add=0,
+            edit=1,
+            delete=2
+        }
+
+
         #endregion
 
         #region Constructor

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WaiteringSystem.Business;
+using static WaiteringSystem.Data.DB;
 
 namespace WaiteringSystem.Data
 {
@@ -113,7 +114,7 @@ namespace WaiteringSystem.Data
                 }
             }
         }
-        private void FillRow(DataRow aRow, Employee anEmp)
+        private void FillRow(DataRow aRow, Employee anEmp, DB.DBOperation dBOperation)
         {
             HeadWaiter headwaiter;
             Runner runner;
@@ -124,6 +125,12 @@ namespace WaiteringSystem.Data
                 aRow["Phone"] = anEmp.Telephone;
                 aRow["Role"] = (byte)anEmp.role.getRoleValue;
             //*** For each role add the specific data variables
+
+            if(dBOperation == DB.DBOperation.add) {
+                aRow["ID"] = anEmp.ID;
+                aRow["EmpID"] = anEmp.EmployeeID;
+            }
+
             switch (anEmp.role.getRoleValue)
             {
                 case Role.RoleType.Headwaiter:
@@ -144,10 +151,32 @@ namespace WaiteringSystem.Data
                     break;
             }
         }
+
+        private int FindRow(Employee anEmp, string table)
+        {
+            int rowIndex = 0;
+            DataRow myRow;
+            int returnValue = -1;
+
+            foreach (DataRow myRow_loopVariable in dsMain.Tables[table].Rows)
+            {
+                myRow = myRow_loopVariable;
+                if (myRow.RowState != DataRowState.Deleted)
+                {
+                    if (anEmp.ID == Convert.ToString(dsMain.Tables[table].Rows[rowIndex]["ID"]))
+                    {
+                        //2.3.7 assign rowIndex to returnValue
+                        returnValue = rowIndex;
+                    }
+                    rowIndex++;
+                }
+            }
+            return returnValue;
+        }
         #endregion
 
         #region Database Operations CRUD
-        public void DataSetChange(Employee anEmp)
+        public void DataSetChange(Employee anEmp, DB.DBOperation dBOperation)
         {
             DataRow aRow = null;
             string dataTable = table1;
@@ -167,8 +196,25 @@ namespace WaiteringSystem.Data
                     dataTable = table3;
                     break;
             }
+            switch (dBOperation)
+            {
+                case DB.DBOperation.add:
+                    aRow = dsMain.Tables[dataTable].NewRow();
+                    FillRow(aRow, anEmp, dBOperation);
+                    dsMain.Tables[dataTable].Rows.Add(aRow); //Add to the dataset
+                    break;
+                case DB.DBOperation.edit:
+                    aRow = dsMain.Tables[dataTable].Rows[FindRow(anEmp, dataTable)];
+
+                    FillRow(aRow, anEmp, dBOperation);
+                    break;
+                case DB.DBOperation.delete:
+                    aRow = dsMain.Tables[dataTable].Rows[FindRow(anEmp, dataTable)];
+                    dsMain.Tables[dataTable].Rows.Remove(aRow);
+                    break;
+            }
             aRow = dsMain.Tables[dataTable].NewRow();
-            FillRow(aRow, anEmp);
+            FillRow(aRow, anEmp, dBOperation);
             //Add to the dataset
             dsMain.Tables[dataTable].Rows.Add(aRow);
         }
@@ -256,6 +302,19 @@ namespace WaiteringSystem.Data
                     break;
             }
             return success;
+        }
+
+        private void Build_UPDATE_Parameters(Employee anEmp)
+        {
+            SqlParameter param = default(SqlParameter);
+            param = new SqlParameter("@Name", SqlDbType.NVarChar, 100, "Name");
+            param.SourceVersion = DataRowVersion.Current;
+            daMain.UpdateCommand.Parameters.Add(param);
+            // 2.5.1 TO DO: -: Do for all fields other than ID and EMPID as for the Build Insert parameters.
+           // Ofcourse, depending on the role. The code is similar to the Build_INSERT_Parameters that you created
+            param = new SqlParameter("@Original_ID", SqlDbType.NVarChar, 15, "ID");
+            param.SourceVersion = DataRowVersion.Original;
+            daMain.UpdateCommand.Parameters.Add(param);
         }
 
         #endregion

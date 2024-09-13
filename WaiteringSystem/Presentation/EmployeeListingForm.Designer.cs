@@ -202,6 +202,7 @@ namespace WaiteringSystem.Presentation
             this.edit.Size = new System.Drawing.Size(58, 43);
             this.edit.TabIndex = 16;
             this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // EmployeeListingForm
             // 
