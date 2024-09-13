@@ -82,3 +82,17 @@ C:\Users\Student\Desktop\mngnta011\WaiteringSystem_W6\WaiteringSystem\obj\Debug\
 C:\Users\Student\Desktop\mngnta011\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.CoreCompileInputs.cache
 C:\Users\Student\Desktop\mngnta011\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.exe
 C:\Users\Student\Desktop\mngnta011\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.pdb
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\bin\Debug\EmployeeDatabase.mdf
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\bin\Debug\EmployeeDatabase_log.ldf
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\bin\Debug\WaiteringSystem.exe.config
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\bin\Debug\WaiteringSystem.exe
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\bin\Debug\WaiteringSystem.pdb
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.AssemblyReference.cache
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.Presentation.EmployeeForm.resources
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.Presentation.EmployeeListingForm.resources
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.Presentation.EmployeesMDIParent.resources
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.Properties.Resources.resources
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.GenerateResource.cache
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.csproj.CoreCompileInputs.cache
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.exe
+\\technet.wf.uct.ac.za\profiledata$\mngnta011\Desktop\MNGNTA011\INF_WS\w6\WaiteringSystem_W6\WaiteringSystem\obj\Debug\WaiteringSystem.pdb

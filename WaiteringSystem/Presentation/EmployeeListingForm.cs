@@ -49,7 +49,7 @@ namespace WaiteringSystem.Presentation
         #endregion
 
         #region Utility methods
-        private void ShowAll(bool value, FormStates state, Role.RoleType roleType)
+        private void ShowAll(bool value, Role.RoleType roleType)
         {
             id_lbl.Visible = value;
             emp_id_lbl.Visible = value;
@@ -164,6 +164,7 @@ namespace WaiteringSystem.Presentation
             this.Activated += EmployeeListingForm_Activated;
 
             state = FormStates.view;
+            employeeController = new EmployeeController();
         }
 
 
@@ -175,6 +176,7 @@ namespace WaiteringSystem.Presentation
             employeeController = empController;
             this.Load += EmployeeListingForm_Load;
             this.Activated += EmployeeListingForm_Activated;
+            employeeController = empController;
 
         }
         #endregion
@@ -193,6 +195,8 @@ namespace WaiteringSystem.Presentation
         private void EmployeeListingForm_Activated(object sender, EventArgs e)
         {
             employeeListView.View = View.Details;
+            setUpEmployeeListView();
+            ShowAll(false, roleValue);
         }
         #endregion
 
@@ -291,13 +295,13 @@ namespace WaiteringSystem.Presentation
         private void employeeListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            ShowAll(true, state, roleValue);       // form state was initiated as view initially
+            ShowAll(true, roleValue);       // form state was initiated as view initially
             state = FormStates.view;
             EnableEntries(false);
 
             if (employeeListView.SelectedItems.Count > 0) // if you selected an item
             {
-                MessageBox.Show("Employee selected");       // debugging
+               //MessageBox.Show("Employee selected");       // debugging
                 Employee employee =
                 employeeController.Find(employeeListView.SelectedItems[0].Text);
                 
