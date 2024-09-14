@@ -69,8 +69,13 @@ namespace WaiteringSystem.Presentation
             if (state == FormStates.view)
             {
                 submit_btn.Visible = false;
-                edit.Visible = false;
+                edit.Visible = value;
             }
+            //else if (state == FormStates.edit)
+            //{
+            //    edit.Visible = true;
+            //    submit_btn.Visible = true;
+            //}
 
             if ((roleType == Role.RoleType.Waiter) || (roleType == Role.RoleType.Runner) && value)
             {
@@ -110,6 +115,8 @@ namespace WaiteringSystem.Presentation
             phone_txt.Enabled = value;
             pay_txt.Enabled = value;
             shifts_txt.Enabled = value;
+
+            submit_btn.Enabled = value;
 
             if (state == FormStates.delete)
             {
@@ -341,6 +348,7 @@ namespace WaiteringSystem.Presentation
         private void edit_Click(object sender, EventArgs e)
         {
             state = FormStates.edit;
+            ShowAll(true, roleValue);
             EnableEntries(true);
         }
 

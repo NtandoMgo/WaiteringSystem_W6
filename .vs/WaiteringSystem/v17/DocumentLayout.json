@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\data\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\data\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\waiteringsystem\\business\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,21 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Data\\DB.cs",
+              "RelativeDocumentMoniker": "WaiteringSystem\\Data\\DB.cs",
+              "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Data\\DB.cs",
+              "RelativeToolTip": "WaiteringSystem\\Data\\DB.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwFIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T14:55:38.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EmployeeForm.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeForm.cs",
               "RelativeDocumentMoniker": "WaiteringSystem\\Presentation\\EmployeeForm.cs",
               "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeForm.cs",
               "RelativeToolTip": "WaiteringSystem\\Presentation\\EmployeeForm.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwL0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAiwL0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T13:54:43.046Z",
               "EditorCaption": ""
@@ -53,7 +66,7 @@
               "RelativeDocumentMoniker": "WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
               "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
               "RelativeToolTip": "WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAxwNMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwEoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T09:53:48.138Z",
               "EditorCaption": ""
@@ -72,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Business\\EmployeeController.cs",
               "RelativeDocumentMoniker": "WaiteringSystem\\Business\\EmployeeController.cs",
