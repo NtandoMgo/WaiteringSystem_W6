@@ -193,6 +193,7 @@ namespace WaiteringSystem.Presentation
             this.delete.Size = new System.Drawing.Size(52, 43);
             this.delete.TabIndex = 17;
             this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // edit
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -366,9 +367,12 @@ namespace WaiteringSystem.Presentation
                 {
                     employeeController.DataMaintenance(employee, DB.DBOperation.edit);
                 }
-                else
+                else if (state == FormStates.delete)
                 {
                     // !! part 3
+                    employeeController.DataMaintenance(employee, DB.DBOperation.delete);
+                    // Delete from the ListView
+                    employeeListView.Items.Remove(employeeListView.SelectedItems[0]);
                 }
                 employeeController.FinalizeChanges(employee);
                 ClearAll();
@@ -377,6 +381,17 @@ namespace WaiteringSystem.Presentation
                 setUpEmployeeListView();
             }
         }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+
+
+            state = FormStates.delete;
+            submit_btn_Click(sender, e); // Call the submit method
+            ShowAll(false, roleValue);
+            EnableEntries(false);
+        }
+
         #endregion
 
 
