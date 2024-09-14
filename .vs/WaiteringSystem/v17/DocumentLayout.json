@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|c:\\users\\student\\desktop\\mngnta011\\waiteringsystem_w6\\waiteringsystem\\business\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\business\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\presentation\\employeelistingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\waiteringsystem\\business\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C25393F5-05C3-4CC4-B5E4-6AACC687E16C}|WaiteringSystem\\WaiteringSystem.csproj|solutionrelative:waiteringsystem\\business\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,27 +29,31 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Business\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "WaiteringSystem\\Business\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Business\\EmployeeController.cs",
-              "RelativeToolTip": "WaiteringSystem\\Business\\EmployeeController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwEsAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T12:35:34.528Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EmployeeForm.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeForm.cs",
+              "RelativeDocumentMoniker": "WaiteringSystem\\Presentation\\EmployeeForm.cs",
+              "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeForm.cs",
+              "RelativeToolTip": "WaiteringSystem\\Presentation\\EmployeeForm.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwL0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T13:54:43.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EmployeeListingForm.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
               "RelativeDocumentMoniker": "WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
               "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
               "RelativeToolTip": "WaiteringSystem\\Presentation\\EmployeeListingForm.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAADgv54AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAxwNMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T09:53:48.138Z",
               "EditorCaption": ""
@@ -61,6 +69,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T08:45:43.133Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Business\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "WaiteringSystem\\Business\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\Student\\Desktop\\mngnta011\\WaiteringSystem_W6\\WaiteringSystem\\Business\\EmployeeController.cs",
+              "RelativeToolTip": "WaiteringSystem\\Business\\EmployeeController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwDMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T12:35:34.528Z",
+              "EditorCaption": ""
             }
           ]
         }

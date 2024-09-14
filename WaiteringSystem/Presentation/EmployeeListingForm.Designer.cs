@@ -86,6 +86,7 @@ namespace WaiteringSystem.Presentation
             this.submit_btn.TabIndex = 3;
             this.submit_btn.Text = "Submit";
             this.submit_btn.UseVisualStyleBackColor = true;
+            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
             // id_lbl
             // 

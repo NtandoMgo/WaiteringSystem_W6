@@ -154,6 +154,34 @@ namespace WaiteringSystem.Presentation
                     break;
             }
         }
+
+        public void PopulateObject(Employee anEmp)
+        {
+            HeadWaiter headW;
+            Waiter waiter;
+            Runner runner;
+
+            anEmp.Name = name_txt.Text;
+            anEmp.Telephone = phone_txt.Text;
+
+            switch (anEmp.role.getRoleValue)
+            {
+                case Role.RoleType.Headwaiter:
+                    headW = (HeadWaiter)(anEmp.role);
+                    headW.SalaryAmount = decimal.Parse(pay_txt.Text);
+                    break;
+                case Role.RoleType.Waiter:
+                    waiter = (Waiter)(anEmp.role);
+                    waiter.getRate = decimal.Parse(pay_txt.Text);
+                    waiter.getShifts = int.Parse(shifts_txt.Text);
+                    break;
+                case Role.RoleType.Runner:
+                    runner = (Runner)(anEmp.role);
+                    runner.getRate = decimal.Parse(pay_txt.Text);
+                    runner.getShifts = int.Parse(shifts_txt.Text);
+                    break;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -309,9 +337,40 @@ namespace WaiteringSystem.Presentation
             }
         }
 
+        #region Action Buttons
         private void edit_Click(object sender, EventArgs e)
         {
-
+            state = FormStates.edit;
+            EnableEntries(true);
         }
+
+        private void submit_btn_Click(object sender, EventArgs e)
+        {
+            string ID = textBox1.Text;
+            Employee employee = employeeController.Find(ID);        // cannot return null coz its taking from the ID in listview
+                                                                    // meaning the employee exits
+
+            if (employee != null)                                   // but just in case
+            {
+                PopulateObject(employee);
+
+                if (state == FormStates.edit)
+                {
+                    employeeController.DataMaintenance(employee, DB.DBOperation.edit);
+                }
+                else
+                {
+                    // !! part 3
+                }
+                employeeController.FinalizeChanges(employee);
+                ClearAll();
+                state = FormStates.view;
+                ShowAll(false, roleValue);
+                setUpEmployeeListView();
+            }
+        }
+        #endregion
+
+
     }
 }

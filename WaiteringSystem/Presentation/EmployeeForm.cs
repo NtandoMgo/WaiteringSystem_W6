@@ -176,7 +176,7 @@ namespace WaiteringSystem.Presentation
             
                 PopulateObject(roleValue);
                 MessageBox.Show("To be submitted to the Database!");
-                employeeController.DataMaintenance(employee);
+                employeeController.DataMaintenance(employee, DB.DBOperation.add);
                 employeeController.FinalizeChanges(employee);
                 ClearAll();
                 ShowAll(false, roleValue);

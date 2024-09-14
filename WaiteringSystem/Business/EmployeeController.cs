@@ -36,11 +36,33 @@ namespace WaiteringSystem.Business
         #endregion
 
         #region Database Communication.
-        public void DataMaintenance(Employee anEmp)
+        public void DataMaintenance(Employee anEmp, DB.DBOperation dBOperation)
         {
-            //perform a given database operation to the dataset in meory; 
-            employeeDB.DataSetChange(anEmp);
-            employees.Add(anEmp);
+            switch (dBOperation)
+            {
+                case DB.DBOperation.add:
+                    employees.Add(anEmp);
+                    employeeDB.DataSetChange(anEmp, dBOperation);
+                    break;
+
+                case DB.DBOperation.edit:
+                    int index = FindIndex(anEmp);
+                    if (index >= 0)
+                    {
+                        employees[index] = anEmp;
+                        employeeDB.DataSetChange(anEmp, dBOperation);
+                    }
+                    break;
+
+                case DB.DBOperation.delete:
+                    index = FindIndex(anEmp);
+                    if (index >= 0)
+                    {
+                        employees.RemoveAt(index);
+                        employeeDB.DataSetChange(anEmp, dBOperation);
+                    }
+                    break;
+            }
         }
 
         //***Commit the changes to the database
@@ -66,7 +88,7 @@ namespace WaiteringSystem.Business
             return matches;
         }
 
-        #region Find method
+        #region Find & Search methods
         public Employee Find(string ID)
         {
             int index = 0;
@@ -89,6 +111,28 @@ namespace WaiteringSystem.Business
             else
             {
                 return null; // Employee not found
+            }
+        }
+
+        public int FindIndex(Employee anEmp)
+        {
+            //Employee employee = anEmp;
+            int counter = 0, count = employees.Count;
+
+            bool found = false;
+            found = (anEmp.ID == employees[counter].ID);
+            while (!found && counter < count) {
+
+                counter++;
+                found = (anEmp.ID == employees[counter].ID);
+            }
+            if (found)
+            {
+                return counter;
+            }
+            else
+            {
+                return -1;
             }
         }
         #endregion
